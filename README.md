@@ -1,4 +1,10 @@
 # EX-16-LEFT-SHIFT-OPERATION
+
+NAME-AANANDHA KANNAN.S
+
+REG NO - 212224040003
+
+
 ## AIM
 To write a C Program to perform the basic left shift operation for 44 integer number with 3 shifts.
 
