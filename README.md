@@ -146,8 +146,37 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+int main() {
+    char str[100];
+    int i = 0, count = 0;
+    int inWord = 0;
+
+    fgets(str, sizeof(str), stdin);
+
+    do {
+        if (str[i] == ' ' || str[i] == '\n' || str[i] == '\0') {
+            if (inWord) {
+                count++;
+                inWord = 0;
+            }
+        } else {
+            inWord = 1;
+        }
+        i++;
+    } while (str[i] != '\0');
+
+    printf("%d\n", count);
+    return 0;
+}
+
+```
 ## OUTPUT
+
+![image](https://github.com/user-attachments/assets/ccbc87e7-354c-4fbd-85bc-7038a31cfb8c)
+
 
 
 
