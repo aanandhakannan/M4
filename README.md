@@ -11,7 +11,21 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 
 ## PROGRAM
 
+```
+#include <stdio.h>
+
+int main() {
+    int a = 44, b = 3;
+    int result = a << b;
+    printf("%d\n", result);
+    return 0;
+}
+
+```
+
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/553d63a2-9ed2-4768-8bcf-b2a5688b0d3d)
+
 
 
 
@@ -47,9 +61,28 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+
+    if(num1 == num2) {
+        printf("Both are equal\n");
+    } else {
+        printf("Both are not equal\n");
+    }
+
+    return 0;
+}
+```
 
 
 ## OUTPUT
+
+![image](https://github.com/user-attachments/assets/ecf809bd-61de-48c4-a81e-05216e98811f)
+
            
 ## RESULT
 
@@ -70,9 +103,27 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    fgets(str, sizeof(str), stdin);
+
+    for(int i = 0; str[i] != '\0'; i++) {
+        str[i] = tolower(str[i]);
+    }
+
+    printf("%s", str);
+    return 0;
+}
+
+```
 
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/dd519915-639c-45c7-8575-adabac7c53e5)
 
 
 
@@ -129,9 +180,45 @@ Step 7: After the loop, check the value of flag:
 Step 8: End the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    char c1[100], c2[100];
+    int flag = 0, i = 0;
+
+    scanf("%[^\n]", c1);
+    getchar();
+    scanf("%s", c2);
+
+    while(c1[i] != '\0' && c2[i] != '\0') {
+        if(c1[i] != c2[i]) {
+            flag = 1;
+            break;
+        }
+        i++;
+    }
+
+    if (c1[i] != c2[i]) {
+        flag = 1;
+    }
+
+    if(flag == 0) {
+        printf("strings are same\n");
+    } else {
+        printf("strings are not same\n");
+    }
+
+    return 0;
+}
+
+```
 
 
 ## OUTPUT
+
+![image](https://github.com/user-attachments/assets/b60879bf-dd64-4ca5-9cce-5ed289efde4a)
+
  
 
 ## RESULT
